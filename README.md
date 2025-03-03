@@ -21,4 +21,9 @@ An initial graph was generated using tableau to allow for some preliminary asses
 Based on this initial analysis, the housing markets with values that change significantly enough to carry out further analysis consists of the following major cities - Halifax (Nova Scotia), Montreal (Quebec), Ottawa-Gatineau (Ontario/Quebec), London (Ontario), Hamilton (Ontario), Toronto (Ontario), Calgary (Alberta), Vancouver (British Columbia), Victoria (British Columbia), Saskatoon (Saskatchewan), Winnipeg (Manitoba), Edmonton (Alberta) and Victoria (British Columbia).
 
 Part 2.2 - long short-term memory used as a neural network to predict future index values for these cities until 2030
+1) The cities of interest are clearly defined so that the model only scans for them when attemtping to retrieve the unique geographies using df["Geography"].unique()
+2) a function (def create_sequences) is defined to inform the algorithm how far into the future we are predicting.
+3) a dictionary is defined to hold the predictions and then the model is trained, fitted and then the predictions are finally made.
+4) the graph is plotted to reflect this.
+5) Dropdown menu is added using widgets.dropdown to allow us to change from one location to the next. 
 
