@@ -1,4 +1,4 @@
-# What Machine Learning Can Tell Us About the Future of the Housing Market Across Canada
+# Housing Index Price Analysis
 
 ## Project Overview
 
