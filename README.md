@@ -83,6 +83,10 @@ To predict future housing price indices, an LSTM model is built and trained. Key
 
 A **dropdown menu** is added using `widgets.dropdown` to allow users to switch between different locations.
 
+![Flowchart](Resources/Activity diagram - Page 2.png)
+
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
