@@ -18,7 +18,7 @@ All of the code for this project was written by the group members, with occasion
 - [Part 2 - Visualizations](#part-2---visualizations)
   - [Part 2.1 - Tableau](#part-21---tableau)
   - [Part 2.2 - LSTM Predictions](#part-22---lstm-predictions)
-- [Contributors](#contributors)
+
 - [License](#license)
 
 ## Objectives
