@@ -83,7 +83,7 @@ To predict future housing price indices, an LSTM model is built and trained. Key
 
 A **dropdown menu** is added using `widgets.dropdown` to allow users to switch between different locations.
 
-![Flowchart](C:\Users\Muskan\Desktop\HousingPredictionsProject4\Resources\Activity diagram - Page 2.png)
+![Flowchart](C:/Users/Muskan/Desktop/HousingPredictionsProject4/Resources/Activity diagram - Page 2.png)
 
 
 
