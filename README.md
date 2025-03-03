@@ -1,29 +1,88 @@
-Title: what machine learning can tell us about the future of the housing market across Canada
+# What Machine Learning Can Tell Us About the Future of the Housing Market Across Canada
 
-Aim: Using a dataset that shows the historical values of the housing price index in many different parts of Canada, an analysis on the trends will take place. 
-Using data from 2018-2024, we are able to make some preliminary assessments of the situation by creating visualizations using tableau. This allows us to get an intial idea of these trends before jumping into predictions. 
-Finally, this data will be fed into a long short-term memory machine learning algorithm (a type of neural network) to predict hoz these price index values will continue to change until 2030. The dataset was obtained from the following source - https://www.kaggle.com/datasets/noeyislearning/housing-price-indexes
+## Project Overview
 
-All of the code was written by the three group members with occasional help from the Xpert AI tool.
+This project aims to explore the future trends of the Canadian housing market using historical housing price index data. By analyzing data from 2018-2024, we first create visualizations to better understand the initial patterns and trends. These trends are then fed into a Long Short-Term Memory (LSTM) neural network model, a type of machine learning algorithm, to predict how housing price indices will change until 2030. The dataset used for this analysis is sourced from [Kaggle: Housing Price Indexes](https://www.kaggle.com/datasets/noeyislearning/housing-price-indexes).
 
-PART 1 - DATA CLEANING - can be found within the file "cleaning.ipynb" which is in the "code" folder in the HousingPredictionsProject4 repository.
-1) Dataset was loaded using Path and pd.read_csv.
-2) The unnecessary columns were dropped by using the method of keeping the desired columns and attaching only those columns to the data.
-3) The columns kept were renamed so as to be easier to understand using the .rename(columns={"...": "...."}).
-4) Some filters were put in place to focus up our analysis - firstly, the dataset was filtered to begin in 2018. Secondly, the dataset was filtered so that the housing index value per location was only kept for the "total" housing type. In other words, we scrapped the division of "house only" or "land only" per location.
-5) The cleaned dataset was saved as a new csv file to be used.
+All of the code for this project was written by the group members, with occasional assistance from the Xpert AI tool.
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Objectives](#objectives)
+- [Technologies Used](#technologies-used)
+- [Data Sources](#data-sources)
+- [Project Structure](#project-structure)
+- [Setup and Installation](#setup-and-installation)
+- [Usage](#usage)
+- [Part 1 - Data Cleaning](#part-1---data-cleaning)
+- [Part 2 - Visualizations](#part-2---visualizations)
+  - [Part 2.1 - Tableau](#part-21---tableau)
+  - [Part 2.2 - LSTM Predictions](#part-22---lstm-predictions)
+- [Contributors](#contributors)
+- [License](#license)
+
+## Objectives
+The primary objective of this project is to analyze the historical trends in housing prices across Canada and predict future values until 2030. The specific tasks include:
+- **Data Cleaning**: Preprocess the dataset to ensure it is in a suitable format for analysis and model building.
+- **Data Visualization**: Create initial visualizations to identify key trends and locations of interest.
+- **Prediction**: Use machine learning (LSTM) to forecast future housing price trends.
+
+## Technologies Used
+- **Python**: Main programming language used for data analysis, cleaning, and machine learning.
+- **Pandas**: Used for data manipulation and cleaning.
+- **NumPy**: For numerical operations.
+- **Matplotlib & Seaborn**: For plotting and visualizing data.
+- **TensorFlow & Keras**: For building and training the Long Short-Term Memory (LSTM) model.
+- **Tableau**: Used for creating interactive visualizations of the data.
+- **Jupyter Notebook**: For running Python code interactively.
+
+## Data Sources
+- **Kaggle Dataset**: The housing price index data for various Canadian cities was obtained from Kaggle.
+  
+    [Kaggle Dataset Link](https://www.kaggle.com/datasets/noeyislearning/housing-price-indexes)
+
+## Project Structure
 
 
-PART 2 - VISUALIZATIONS
-Part 2.1 - tableau
-An initial graph was generated using tableau to allow for some preliminary assessment of the data. The different locations were plotted seperately on the graph with the use of the dropdown menu allowing us to change location and thus get the correctly associated graph. The "date" variable was put into columns and the "index value" one into rows to generate the graph.
+## Setup and Installation
 
-Based on this initial analysis, the housing markets with values that change significantly enough to carry out further analysis consists of the following major cities - Halifax (Nova Scotia), Montreal (Quebec), Ottawa-Gatineau (Ontario/Quebec), London (Ontario), Hamilton (Ontario), Toronto (Ontario), Calgary (Alberta), Vancouver (British Columbia), Victoria (British Columbia), Saskatoon (Saskatchewan), Winnipeg (Manitoba), Edmonton (Alberta) and Victoria (British Columbia).
+### Prerequisites
+- Python 3.7 or higher
+- Necessary Python libraries (listed in `requirements.txt`)
 
-Part 2.2 - long short-term memory used as a neural network to predict future index values for these cities until 2030
-1) The cities of interest are clearly defined so that the model only scans for them when attemtping to retrieve the unique geographies using df["Geography"].unique()
-2) a function (def create_sequences) is defined to inform the algorithm how far into the future we are predicting.
-3) a dictionary is defined to hold the predictions and then the model is trained, fitted and then the predictions are finally made.
-4) the graph is plotted to reflect this.
-5) Dropdown menu is added using widgets.dropdown to allow us to change from one location to the next. 
+### Installation Steps:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/HousingPredictionsProject4.git
+    cd HousingPredictionsProject4
 
+## Usage
+
+### Part 1 - Data Cleaning
+The data cleaning process is handled in the `cleaning.ipynb` file. Here’s a summary of the steps:
+- **Dataset Loading**: The dataset is loaded using the `Path` method and `pd.read_csv`.
+- **Column Filtering**: Unnecessary columns are removed, and only relevant columns are retained for analysis.
+- **Renaming Columns**: Columns are renamed for clarity and easier understanding.
+- **Data Filtering**: The dataset is filtered to include only the "total" housing type per location and data starting from 2018.
+- **Saving Cleaned Data**: The cleaned data is saved as a new CSV file (`cleaned_data.csv`) for further use.
+
+### Part 2 - Visualizations
+#### Part 2.1 - Tableau
+An initial visualization is created using **Tableau** to provide a preliminary understanding of the trends in the data. This includes:
+- Plotting the housing index values by location.
+- Using a dropdown menu to switch between different locations.
+- Displaying the `date` variable in columns and the `index value` in rows.
+
+#### Part 2.2 - LSTM Predictions
+To predict future housing price indices, an LSTM model is built and trained. Key steps include:
+- **City Selection**: The cities of interest are filtered using `df["Geography"].unique()`.
+- **Sequence Creation**: A function (`create_sequences`) is defined to manage the data sequences for prediction.
+- **Model Training**: The LSTM model is trained on the filtered data.
+- **Prediction**: After training, the model generates predictions for future housing price indices.
+- **Visualization**: A plot is created to visualize the predicted trends until 2030.
+
+A **dropdown menu** is added using `widgets.dropdown` to allow users to switch between different locations.
+
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
